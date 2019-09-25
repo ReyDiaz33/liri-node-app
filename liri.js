@@ -13,7 +13,17 @@ let request = require("request");
 // REQUIRE moment
 const moment = require("moment");
 
+// INITILIZE SPOTIFY
+const Spotify = require("node-spotify-api");
+const spotify = new Spotify(keys.spotify);
 
+// OMDB and BANDS-In-Town API's
+let omdb = (keys.omdb);
+let bandsInTown = (keys.bandsInTown)
+
+// User Command and Input
+let userInput = process.argv[2];
+let userQuery = process.argv.slice(3).join(" ");
 
 
 
