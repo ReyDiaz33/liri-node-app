@@ -25,6 +25,28 @@ let bandsInTown = (keys.bandsInTown)
 let userInput = process.argv[2];
 let userQuery = process.argv.slice(3).join(" ");
 
+// functions
+function userCommand(userInput, userQuery) {
+
+};
+userCommand(userInput, userQuery);
+function concertThis() {
+
+};
+
+function spotifyThisSong() { 
+
+};
+
+function movieThis() {
+
+};
+
+function doThis() {
+
+};
+
+
 
 
 // var spotify = new Spotify(keys.spotify);
