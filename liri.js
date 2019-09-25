@@ -27,11 +27,27 @@ let userQuery = process.argv.slice(3).join(" ");
 
 // functions
 function userCommand(userInput, userQuery) {
-
-};
-userCommand(userInput, userQuery);
-function concertThis() {
-
+    userCommand(userInput, userQuery);
+    function concertThis() {
+    // switch based on user's command
+    switch(userInput) {
+        case "concert-this":
+            concertThis();
+            break;
+        case "spotify-this":
+            spotifyThisSong();
+            break;
+        case "movie-this":
+            movieThis();
+            break;
+        case "do-this":
+            doThis(userQuery);
+            break;
+        default:
+            console.log("Invalid Entry");
+            break;
+    }
+}
 };
 
 function spotifyThisSong() { 
