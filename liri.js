@@ -27,8 +27,6 @@ let userQuery = process.argv.slice(3).join(" ");
 
 // functions
 function userCommand(userInput, userQuery) {
-    userCommand(userInput, userQuery);
-    function concertThis() {
     // switch based on user's command
     switch(userInput) {
         case "concert-this":
@@ -46,8 +44,30 @@ function userCommand(userInput, userQuery) {
         default:
             console.log("Invalid Entry");
             break;
+    
     }
-}
+
+};
+userCommand(userInput, userQuery);
+
+function concertThis() {
+    console.log(`\n - - - - -\n\nSearching For...${userQuery}'s next show...`);
+    request("https://rest.bandsintown.com/artists/" + userQuery + "events?app_id=" + bandsInTown)
+    if (!error && Response.statusCode === 200){
+        for (i = 0; i < 1; i++){
+            console.log(
+                `FOUND IT! Is this hat you were looking for...
+                Artist: ${userBand[i].lineup[0]},
+                Venue: ${userBand[i].venue.name},
+                Location: ${userBand[i].venue.latitude},
+                Venue City: ${userBand[i].venue.city},${userBand[i].venue.country}
+                `)
+            let concertDate = moment(userBand[i].datetime).format("MM/DD/YYYY hh:00 A");
+            console.log(`Date and Time: ${concertDate}\n\n- - - - - -`);
+        }
+        } else { 
+            console.log("NOT FOUND!")
+        }
 };
 
 function spotifyThisSong() { 
