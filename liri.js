@@ -25,6 +25,9 @@ let bandsInTown = (keys.bandsInTown)
 let userInput = process.argv[2];
 let userQuery = process.argv.slice(3).join(" ");
 
+
+
+// ---------------------------------------------------------------------------------------------------
 // functions
 function userCommand(userInput, userQuery) {
     // switch based on user's command
@@ -49,8 +52,11 @@ function userCommand(userInput, userQuery) {
 
 };
 userCommand(userInput, userQuery);
+// ------------------------------------------------------------------------------------------------------------------------
 
 function concertThis() {
+    var bandsInTown = "codingbootcamp";
+
     console.log(`\n - - - - -\n\nSearching For...${userQuery}'s next show...`);
     request("https://rest.bandsintown.com/artists/" + userQuery + "events?app_id=" + bandsInTown)
     if (!error && Response.statusCode === 200){
@@ -69,26 +75,50 @@ function concertThis() {
             console.log("NOT FOUND!")
         }
 };
+concertThis();
+// ------------------------------------------------------------------------------------------------------------------------
 
 function spotifyThisSong() { 
+console.log(`\n- - - - - - \n\nSearching for...${userQuery}`);
 
+if (!userQuery) { userQuery = "the sign ace of base"};
+
+spotify.search({ type: "track", query: userQuery, limit: 1 }, function(error, data){
+    if (error){
+        return console.log("Error!" + error);
+
+    }
+        let spotifyArr = data.tracks.items;
+
+        for (i = 0; i < spotifyArr.length; i++) {
+            console.log(
+                `FOUND IT!
+                Artist: ${data.tracks.items[i].album.artist[0].name}
+                Song: ${data.tracks.items[i].name},
+                Spotify Link: ${data.tracks.items[i].external_urls.spotify},
+                Album: ${data.tracks.items[i]}
+
+                `
+            );
+        }
+})
 };
+spotifyThisSong();
+// ------------------------------------------------------------------------------------------------------------------------
 
 function movieThis() {
+    var omdbURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
 
 };
+movieThis();
+// ------------------------------------------------------------------------------------------------------------------------
 
 function doThis() {
-
+// reads from the txt file
 };
+doThis();
+// ------------------------------------------------------------------------------------------------------------------------
 
 
 
 
-// var spotify = new Spotify(keys.spotify);
-
-// Make it so liri.js can take in one of the following commands:
-// concert-this
-// spotify-this-song
-// movie-this
-// do-what-it-says
