@@ -139,3 +139,27 @@ Venue location: Spokane
         Plot: 
         Bond's loyalty to M is tested when her past comes back to haunt her. When MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.
             ======End Movie Log Entry======
+        ======Begin Spotify Log Entry====== 
+        Artist: Harry Styles,
+        Song Name: Sign of the Times,
+        Preview Link: https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN, 
+        Album Name: Harry Styles 
+        ======End Spotify Log Entry======
+        ======Begin Spotify Log Entry====== 
+        Artist: Big Pun,
+        Song Name: Still Not a Player (feat. Joe) - Radio Version,
+        Preview Link: https://api.spotify.com/v1/tracks/3GKL13lkM5nRc4zC1lIOrR, 
+        Album Name: Capital Punishment (Explicit Version) 
+        ======End Spotify Log Entry======
+======Begin Spotify Log Entry====== 
+Artist: Big Pun,
+Song Name: Still Not a Player (feat. Joe) - Radio Version,
+Preview Link: https://api.spotify.com/v1/tracks/3GKL13lkM5nRc4zC1lIOrR, 
+Album Name: Capital Punishment (Explicit Version) 
+======End Spotify Log Entry======
+======Begin Spotify Log Entry====== 
+Artist: OutKast,
+Song Name: Hey Ya!,
+Preview Link: https://api.spotify.com/v1/tracks/2PpruBYCo4H7WOBJ7Q2EwM, 
+Album Name: Speakerboxxx/The Love Below 
+======End Spotify Log Entry======
